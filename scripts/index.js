@@ -200,25 +200,24 @@ var docId = function (id) {
   return document.getElementById(id);
 }
 // array that includes [0]: portal login id, [1-15]: ids of bios, total of sixteen array items
-var bioPics = [docId('memberArrow'), docId('bas-ceo'), docId('bas-cfo'), docId('bas-pres'), docId('bas-vp-salesops'), docId('bas-vp-sales'), docId('bas-directorbd-mar'), docId('bas-directorbd-ser'), docId('bas-directorbd-wr'), docId('bas-directorbd-mwr'), docId('bas-director-bd'), docId('bas-director-mis'), docId('bas-director-fa'), docId('bas-director-acct'), docId('bas-director-loss'), docId('bas-director-claims')];
+var bioPics = [docId('bas-ceo'), docId('bas-cfo'), docId('bas-pres'), docId('bas-vp-salesops'), docId('bas-vp-sales'), docId('bas-directorbd-mar'), docId('bas-directorbd-ser'), docId('bas-directorbd-wr'), docId('bas-directorbd-mwr'), docId('bas-director-bd'), docId('bas-director-mis'), docId('bas-director-fa'), docId('bas-director-acct'), docId('bas-director-loss'), docId('bas-director-claims')];
 
+// state global variables
 var modalWrapper = document.getElementById('modal-wrapper');
+var picUrl;
 
-
-var searchPic;
-
+// loop through bioPics array
 for (var i = 0; i < bioPics.length; i++) {
   bioPics[i].onclick = function () {
-    function LoadImages() {
-      searchPic = new Image(100, 100);
-      searchPic.src = "XXXX/YYYY/search.png";
+    function imageSrc() {
+      picUrl.src = bioPics[i];
       // This is correct and the path is correct
     }
 
   }
 }
 
-document["pic1"].src = searchPic.src;
+document["bio-picture"].src = picUrl.src;
 
 // close the modal when close button is clicked
 document.getElementsByClassName('bas-close').onclick = function () {
