@@ -4,33 +4,33 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')    
     title Modal PopUp
   body
     button#memberArrow(type='button') Portal Login   
-    #modal-wrapper
     .team-bio-modal(style='display: none;')
       .team-bio-modal-scroll
-        span.bas-close(onclick="document.getElementById(\'modal-wrapper\').style.display=\'none\'", title='Close PopUp') x
-        .team-bio-modal-content
-          img.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Jim-C.jpg')
+        span.bas-close(onClick="document.getElementsByClassName('team-bio-modal')[0].style.display='none';", title='Close PopUp') x
+        .team-bio-modal-content(style="text-align: center;")
+          img.pic-url(src='')
           .team-bio-name
-            h4 James E. Connell
-            span CEO
-            br
-            a(href='https://www.linkedin.com/in/james-connell-090a6114/', title='View LinkedIn profile', target='_blank')
-              | LinkedIn Profile 
-              i.icon-linkedin
-          p
-            | Jim graduated from the University of Iowa with a degree in Finance and Marketing. He received his MBA from the University of Chicago, Booth School of Business. Prior to joining BAS, Jim spent 22 years with Inland Steel in a variety of sales, marketing, and strategic management positions. Jim was also the President of Energy Absorptions System, the largest operating company of Quixote Corporation from 1999 to 2009. In 2010, Jim joined BAS as Chief Executive Officer.
-          p
-            | Working with his BAS partners, Joe Toscano and Marty Joseph, he has created a growth strategy for the organization to identify new opportunities and create a culture of greater accountability. With over 30 years of business experience Jim brings valuable management skills to the team. Jim adds significant leadership to his employee, broker, and client relationships.
-          p.bio-perspective
-            | Jim’s Perspective: "I am most satisfied when I see our employees reach their full potential. Here at BAS we like to support a competitive spirit in order to remain the best business partner to our brokers and clients."
-          p
-            | Jim is a husband, father of two, and a grandfather. He enjoys spending time with his family, golfing, and traveling. He was Vice Chairman of the American Road and Transportation Builders Association from 2004 to 2009. Jim is currently a member of Cigna’s Payer Advisory Council, SPBA, and SIIA.
-        // end .team-bio-modal-content
-      // end .team-bio-modal-scroll
+          h4.first-name
+          span.company-title
+          br
+          a(href='', title='View LinkedIn profile', target='_blank').linkedin-url
+            | LinkedIn Profile 
+            i.icon-linkedin
+          p.bio-content-p1
+            | 
+          p.bio-content-p2
+            | 
+          img.region-map(src='')
+          p.quote
+            | 
+          p.bio-content-p3
 
     .section.mcb-section(style='padding-top:40px; padding-bottom:40px; background-color:#eee')
       .section_wrapper.mcb-section-inner

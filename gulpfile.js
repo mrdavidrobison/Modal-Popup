@@ -3,6 +3,7 @@ var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
+var minify = require('gulp-minify');
 
 gulp.task('jade', function(){
   gulp.src('./src/*.jade')
@@ -48,10 +49,23 @@ gulp.task('sync', function() {
   });
 });
 
-gulp.task('default', ['jade', 'stylus', 'js', 'img', 'fonts', 'sync'], function() {
+gulp.task('compress', function() {
+  gulp.src('scripts/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: [''],
+        ignoreFiles: ['']
+    }))
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task('default', ['jade', 'stylus', 'js', 'img', 'fonts', 'sync', 'compress'], function() {
   gulp.watch('./src/*.jade', ['jade']);
   gulp.watch('./css/*.stylus', ['stylus']);
-  gulp.watch('./scripts/*.js', ['js']);
+  gulp.watch('./scripts/*.js', ['js', 'compress']);
   gulp.watch('./images/*', ['img']);
   gulp.watch('./fonts/*', ['fonts']);
   gulp.watch('*.html').on('change', reload);
