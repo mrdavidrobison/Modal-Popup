@@ -12,7 +12,7 @@ $.getScript('modalDetails.js', function()
 
 jQuery(function($) {
   window.modalOpen = false;
-  $(".team-bio").click(function() {
+  $(".bio-pic", ".team-bio-name").click(function() {
     if (!window.modalOpen) {
       $(".team-bio-modal", this).show();
       $("body").addClass("modal-open");
