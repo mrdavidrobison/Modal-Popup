@@ -218,7 +218,7 @@ for (let i = 0; i < bioPics.length; i++) {
 
     teamBioModal[0].style.display = "block";
 
-    var arrayObject = basTeamMembers[i-1];
+    var arrayObject = basTeamMembers[i];
 
     var picToAdd = docClass("pic-url");
     picToAdd[0].setAttribute('src', arrayObject["picUrl"]);
