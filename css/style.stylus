@@ -104,6 +104,7 @@ input[type=text], input[type=password]
   border-left 10px solid #3f949a
 
 .team-bio-modal
+  text-align center
   display none
   opacity 1
   -webkit-transition all 0.3s
