@@ -210,8 +210,21 @@ var teamBioModal = docClass('team-bio-modal');
 
 
 // array that includes [0]: portal login id, [1-15]: ids of bios, total of sixteen array items
-var bioPics = [docId('memberArrow'), docId('bas-ceo'), docId('bas-cfo'), docId('bas-pres'), docId('bas-vp-salesops'), docId('bas-vp-sales'), docId('bas-directorbd-mar'), docId('bas-directorbd-ser'), docId('bas-directorbd-wr'), docId('bas-directorbd-mwr'), docId('bas-director-bd'), docId('bas-director-mis'), docId('bas-director-fa'), docId('bas-director-acct'), docId('bas-director-loss'), docId('bas-director-claims')];
+var bioPics = [docId('bas-ceo'), docId('bas-cfo'), docId('bas-pres'), docId('bas-vp-salesops'), docId('bas-vp-sales'), docId('bas-directorbd-mar'), docId('bas-directorbd-ser'), docId('bas-directorbd-wr'), docId('bas-directorbd-mwr'), docId('bas-director-bd'), docId('bas-director-mis'), docId('bas-director-fa'), docId('bas-director-acct'), docId('bas-director-loss'), docId('bas-director-claims')];
 
+<<<<<<< HEAD
+// state global variables
+var modalWrapper = document.getElementById('modal-wrapper');
+var picUrl;
+
+// loop through bioPics array
+for (var i = 0; i < bioPics.length; i++) {
+  bioPics[i].onclick = function () {
+    function imageSrc() {
+      picUrl.src = bioPics[i];
+      // This is correct and the path is correct
+    }
+=======
 
 // for loop to check if id is clicked that matches array items
 for (let i = 0; i < bioPics.length; i++) {
@@ -220,6 +233,7 @@ for (let i = 0; i < bioPics.length; i++) {
     teamBioModal[0].style.display = "block";
 
     var arrayObject = basTeamMembers[i-1];
+>>>>>>> 63a52cbc4c7c672718107f7c1a851f87182c2b9e
 
     var picToAdd = docClass("pic-url");
     picToAdd[0].setAttribute('src', arrayObject["picUrl"]);
@@ -233,6 +247,9 @@ for (let i = 0; i < bioPics.length; i++) {
     var linkedInUrlToAdd = docClass("linkedin-url");
     linkedInUrlToAdd[0].setAttribute('href', arrayObject["linkedInUrl"]);
 
+<<<<<<< HEAD
+document["bio-picture"].src = picUrl.src;
+=======
     var bioContentP1ToAdd = docClass("bio-content-p1");
     bioContentP1ToAdd[0].innerHTML = arrayObject["bioContentP1"];
  
@@ -249,6 +266,7 @@ for (let i = 0; i < bioPics.length; i++) {
     bioContentP3ToAdd[0].innerHTML = arrayObject["bioContentP3"];    
   };
 }
+>>>>>>> 63a52cbc4c7c672718107f7c1a851f87182c2b9e
 
 $(".team-bio-modal").on("show", function () {
   $("body").addClass("modal-open");
