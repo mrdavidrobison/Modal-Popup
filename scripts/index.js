@@ -205,7 +205,6 @@ var docClass = function(cl) {
   return document.getElementsByClassName(cl);
 }
 
-var modalWrapper = docId('modal-wrapper');
 var teamBioModal = docClass('team-bio-modal');
 
 
