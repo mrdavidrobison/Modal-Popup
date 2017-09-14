@@ -192,7 +192,7 @@ var basTeamMembers = [{
     regionMap: '',
     quote: '',
     bioContentP3: ''
-  },
+  }
 ];
 
 
