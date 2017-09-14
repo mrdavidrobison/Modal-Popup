@@ -253,7 +253,6 @@ jQuery(function($) {
   window.modalOpen = false;
   $(".team-bio").click(function() {
     if (!window.modalOpen) {
-      $(".team-bio-modal").hide();
       $(".team-bio-modal", this).show();
       $("body").addClass("modal-open");
       window.modalOpen = true;
