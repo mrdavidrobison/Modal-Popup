@@ -5,160 +5,116 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    link(rel='stylesheet', type='text/css', href='style.css')   
+    link(rel='stylesheet', type='text/css', href='style.css')    
     title Modal PopUp
-  body  
-    .team-bio-modal(style='display: none;')
+  body
+    .team-bio-modal
       .team-bio-modal-scroll
-        span.bas-close(onClick="document.getElementsByClassName('team-bio-modal')[0].style.display='none';", title='Close PopUp') x
-        .team-bio-modal-content(style="text-align: center;")
+        span.bas-close x
+        .team-bio-modal-content
           img.pic-url(src='')
           .team-bio-name
-          h4.first-name
-          span.company-title
-          br
-          a(href='', title='View LinkedIn profile', target='_blank').linkedin-url
-            | LinkedIn Profile 
-            i.icon-linkedin
-          p.bio-content-p1
-            | 
-          p.bio-content-p2
-            | 
-          img.region-map(src='')
-          p.quote
-            | 
-          p.bio-content-p3
+            h4.bio-name 
+            span.company-title 
+            a(href='', class="linkedin-url", title='View LinkedIn profile', target='_blank')
+              | LinkedIn Profile 
+              i.icon-linkedin
+            p.bio-content-p1
+            p.bio-content-p2
+            img.region-map(src='')
+            p.quote
+            p.bio-content-p3
 
-    .section.mcb-section(style='padding-top:40px; padding-bottom:40px; background-color:#eee')
-      .section_wrapper.mcb-section-inner
-        .wrap.mcb-wrap.one.valign-top.clearfix(style='')
-          .mcb-wrap-inner
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-ceo.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Jim-C.jpg')
-                  .team_bio_name
-                    h4 James E. Connell
-                    span CEO
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-cfo.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Joe-T.jpg')
-                  .team_bio_name
-                    h4 Joe Toscano
-                    span CFO
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-pres.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Marty-J.jpg')
-                  .team_bio_name
-                    h4 M. W. Joseph
-                    span President
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-vp-salesops.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Justin-F.jpg')
-                  .team_bio_name
-                    h4 Justin Forton
-                    span Vice President Sales Operations
-                 
-            .column.mcb-column.one.column_divider
-              hr.no_line
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-vp-sales.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Tom-K.jpg')
-                  .team_bio_name
-                    h4 Thomas Klupchak
-                    span Vice President of Sales
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-directorbd-mar.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Elizabeth-T.jpg')
-                  .team_bio_name
-                    h4 Elizabeth Toscano
-                    span Director of Business Development - Mid Atlantic Region
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-directorbd-ser.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Jake-N.jpg')
-                  .team_bio_name
-                    h4 Jake Norman
-                    span Director of Business Development - South Eastern Region
-                 
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-directorbd-wr.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Shane_D.png')
-                  .team_bio_name
-                    h4 Shane Duffy
-                    span Director of Business Development - Western Region
-                 
-            .column.mcb-column.one.column_divider
-              hr.no_line
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-directorbd-mwr.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Terri-R.jpg')
-                  .team_bio_name
-                    h4 Terri Raimondi
-                    span Director of Business Development - MidWest Region
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-director-bd.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_John-C.jpg')
-                  .team_bio_name
-                    h4 John Cooper
-                    span Director of Business Development
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-director-mis.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Patti-C.jpg')
-                  .team_bio_name
-                    h4 Patti Cain
-                    span Director of Management Information Systems (MIS)
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-director-fa.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Kyle-B.jpg')
-                  .team_bio_name
-                    h4 Kyle Bersnak
-                    span Director of Finance and Accounting
-                  
-            .column.mcb-column.one.column_divider
-              hr.no_line
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-director-acct.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Lynn-P.jpg')
-                  .team_bio_name
-                    h4 Lynn Davis
-                    span Director of Accounting
-                 
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-director-loss.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_John-V.jpg')
-                  .team_bio_name
-                    h4 John Vinopal
-                    span Director of Stop Loss Underwriting
-                  
-            .column.mcb-column.one-fourth.column_column.column-margin-
-              .column_attr.clearfix.align_center(style='')
-                .team_bio
-                  img#bas-director-claims.bio_picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Tracy-W.jpg')
-                  .team_bio_name
-                    h4 Tracey Wells
-                    span Director of Claim Operations
+    .team-bio
+      img#bas-ceo.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Jim-C.jpg')
+      .team-bio-name
+        h4 James E. Connell
+        span CEO
+      
+    .team-bio
+      img#bas-cfo.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Joe-T.jpg')
+      .team-bio-name
+        h4 Joe Toscano
+        span CFO
+  
+    .team-bio
+      img#bas-pres.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Marty-J.jpg')
+      .team-bio-name
+        h4 M. W. Joseph
+        span President
+      
+    .team-bio
+      img#bas-vp-salesops.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Justin-F.jpg')
+      .team-bio-name
+        h4 Justin Forton
+        span Vice President Sales Operations
+      
+    .team-bio
+      img#bas-vp-sales.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Tom-K.jpg')
+      .team-bio-name
+        h4 Thomas Klupchak
+        span Vice President of Sales
+      
+    .team-bio
+      img#bas-directorbd-mar.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Elizabeth-T.jpg')
+      .team-bio-name
+        h4 Elizabeth Toscano
+        span Director of Business Development - Mid Atlantic Region
+      
+    .team-bio
+      img#bas-directorbd-ser.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Jake-N.jpg')
+      .team-bio-name
+        h4 Jake Norman
+        span Director of Business Development - South Eastern Region
+      
+    .team-bio
+      img#bas-directorbd-wr.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Shane_D.png')
+      .team-bio-name
+        h4 Shane Duffy
+        span Director of Business Development - Western Region
+      
+    .team-bio
+      img#bas-directorbd-mwr.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Terri-R.jpg')
+      .team-bio-name
+        h4 Terri Raimondi
+        span Director of Business Development - MidWest Region
+      
+    .team-bio
+      img#bas-director-bd.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_John-C.jpg')
+      .team-bio-name
+        h4 John Cooper
+        span Director of Business Development
+      
+    .team-bio
+      img#bas-director-mis.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Patti-C.jpg')
+      .team-bio-name
+        h4 Patti Cain
+        span Director of Management Information Systems (MIS)
+      
+    .team-bio
+      img#bas-director-fa.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Kyle-B.jpg')
+      .team-bio-name
+        h4 Kyle Bersnak
+        span Director of Finance and Accounting
+      
+    .team-bio
+      img#bas-director-acct.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Lynn-P.jpg')
+      .team-bio-name
+        h4 Lynn Davis
+        span Director of Accounting
+      
+    .team-bio
+      img#bas-director-loss.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_John-V.jpg')
+      .team-bio-name
+        h4 John Vinopal
+        span Director of Stop Loss Underwriting
+  
+    .team-bio
+      img#bas-director-claims.bio-picture(src='http://brainstorm.solutions/bas/wp-content/uploads/2017/08/Team_Tracy-W.jpg')
+      .team-bio-name
+        h4 Tracey Wells
+        span Director of Claim Operations
 
-  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')                   
-  script(src="index.js")
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js') 
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')  
+  script(src="functions.js")

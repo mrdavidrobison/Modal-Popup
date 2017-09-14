@@ -223,7 +223,7 @@ for (let i = 0; i < bioPics.length; i++) {
     var picToAdd = docClass("pic-url");
     picToAdd[0].setAttribute('src', arrayObject["picUrl"]);
 
-    var nameToAdd = docClass("first-name");
+    var nameToAdd = docClass("bio-name");
     nameToAdd[0].innerHTML = arrayObject["firstName"] + " " + arrayObject["lastName"];
     
     var companyTitleToAdd = docClass("company-title");
@@ -248,3 +248,46 @@ for (let i = 0; i < bioPics.length; i++) {
     bioContentP3ToAdd[0].innerHTML = arrayObject["bioContentP3"];    
   };
 }
+
+jQuery(function($) {
+  window.modalOpen = false;
+  $(".team-bio").click(function() {
+    if (!window.modalOpen) {
+      $(".team-bio-modal").hide();
+      $(".team-bio-modal", this).show();
+      $("body").addClass("modal-open");
+      window.modalOpen = true;
+    }
+  });
+  $(".bas-close").click(function() {
+    if (window.modalOpen) {
+      setTimeout(function() {
+        $(".team-bio-modal").hide();
+        window.modalOpen = false;
+        $("body").removeClass("modal-open");
+      }, 100);
+    }
+  });
+
+  $(document).mouseup(function(e) {
+    var container = $(".team-bio-modal");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      if (window.modalOpen) {
+        container.hide();
+        setTimeout(function() {
+          window.modalOpen = false;
+          $("body").removeClass("modal-open");
+        }, 100);
+      }
+    }
+  });
+
+  // Prevent <body> from scrolling while mouse is inside modal
+  $('.team-bio-modal-scroll').on( 'mousewheel DOMMouseScroll', function (e) {
+    var e0 = e.originalEvent;
+    var delta = e0.wheelDelta || -e0.detail;
+    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+    e.preventDefault();
+  });
+
+});
