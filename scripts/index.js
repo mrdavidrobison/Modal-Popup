@@ -248,9 +248,3 @@ for (let i = 0; i < bioPics.length; i++) {
     bioContentP3ToAdd[0].innerHTML = arrayObject["bioContentP3"];    
   };
 }
-
-$(".team-bio-modal").on("show", function () {
-  $("body").addClass("modal-open");
-}).on("hidden", function () {
-  $("body").removeClass("modal-open")
-});
